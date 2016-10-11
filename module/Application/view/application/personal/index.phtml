@@ -1,0 +1,24 @@
+<?php
+$title = 'Mitarbeiter';
+$this->headTitle($title);
+?>
+<h1><?php echo $this->escapeHtml($title); ?></h1>
+<p><a href="<?php echo $this->url('personal', array('action'=>'add'));?>">Neuen Mitarbeiter hinzufügen</a></p>
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>Name</th>
+        <th>&nbsp;</th>
+        <th>&nbsp;</th>
+    </tr>
+    <?php foreach($mitarbeiter as $ma) : ?>
+        <tr>
+            <td><?php echo $this->escapeHtml($ma->getName());?></td>
+            <td>
+                <a href="<?php echo $this->url('personal', array('controller'=>'Personal','action' => 'edit', 'id' => $ma->getId())); ?>">Edit</a>
+            </td>
+            <td>
+                <a href="<?php echo $this->url('personal', array('controller'=>'Personal','action' => 'delete', 'id' => $ma->getId())); ?>" onclick="return confirm('Are you sure?')">Delete</a>
+            </td>
+        </tr>
+    <?php endforeach; ?>
+</table>

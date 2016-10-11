@@ -1,0 +1,14 @@
+{
+    "name": "fbarthold/Personalverwaltung",
+    "description": "Testaufgabe Personalverwaltung",
+    "license": "BSD-3-Clause",
+    "require": {
+        "php": ">=5.5",
+        "zendframework/zendframework": "~2.5",
+        "doctrine/doctrine-orm-module": "^0.9.1",
+        "neilime/zf2-twb-bundle": "^2.5"
+    },
+    "require-dev": {
+        "zendframework/zend-developer-tools": "dev-master"
+    }
+}
